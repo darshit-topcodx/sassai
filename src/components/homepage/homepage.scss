@@ -1,0 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&display=swap");
+
+//animation sec=---------------------------------------
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 300%;
+    overflow: hidden;
+  }
+
+  75% {
+    // font-size: 300%;
+    // margin-left: 25%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+//end==============================
+.ab-div {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.5;
+  background-color: black;
+}
+.homepage {
+  .header-sec {
+    background: url("https://img.freepik.com/free-photo/glowing-filament-ignites-ideas-innovative-solutions-generated-by-ai_188544-9614.jpg?w=1380&t=st=1686037553~exp=1686038153~hmac=8fd85db3169a32106e4140a0a3782d3310e0d72547f2e46724535c28e0a43e3d");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    h1 {
+      animation-duration: 1s;
+      animation-name: slidein;
+      width: 50%;
+      font-size: 100px;
+      color: white;
+    }
+    p {
+      width: 40%;
+      font-size: 24px;
+      color: rgb(210, 211, 213);
+    }
+  }
+
+  .about-sec {
+    background-color: black;
+    height: 100%;
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .about-img {
+        position: relative;
+        width: 590px;
+        height: 730px;
+        .about-img-1 {
+          top: 60px;
+          position: absolute;
+          width: 450px;
+          height: 450px;
+        }
+        .about-img-2 {
+          position: absolute;
+          top: 200px;
+          left: 130px;
+          width: 450px;
+          height: 450px;
+        }
+      }
+      .about-txt {
+        height: 730px;
+        width: 590px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 50px;
+        p {
+          color: white;
+          font-size: 20px;
+        }
+        h1 {
+          color: white;
+        }
+        button {
+          margin-top: 20px;
+          border: 0px;
+          height: 50px;
+          border-radius: 25px;
+          width: 140px;
+          background-color: rgb(254, 178, 0);
+          color: white;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .bonus-sec {
+    // background: url("../../images/back2.jpg");
+    background: url("https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/background-2-rtv-copyright.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 230px;
+
+    .bonus-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      h1 {
+        color: white;
+        font-size: 40px;
+      }
+      p {
+        font-size: 22px;
+        width: 50%;
+        color: rgb(210, 211, 213);
+      }
+      .bonus-box {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .box {
+          width: 322px;
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+          .bonus-pracentage {
+            width: 100%;
+            padding-bottom: 15px;
+            border-bottom: 25px solid rgb(254, 178, 0);
+          }
+          p {
+            margin-top: 20px;
+            color: rgb(210, 211, 213);
+            margin-bottom: 0px;
+
+            font-size: 20px;
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  .features-sec {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    .features-contant {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        color: white;
+      }
+      p {
+        color: white;
+        font-size: 22px;
+      }
+    }
+    .features-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      margin-top: 80px;
+      .box {
+        h2 {
+          color: white;
+        }
+        padding: 20px;
+        padding-bottom: 40px;
+        width: 430px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        &:hover {
+          background-color: #131212;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  .clint-sec {
+    height: 850px;
+    display: flex;
+    align-items: center;
+    // background: url("../../images/back3.jpg");
+    background: url("https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/background-3-rtv-copyright.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .client-contet {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      .client-txt {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        h1 {
+          color: white;
+        }
+        p {
+          color: white;
+          font-size: 20px;
+        }
+      }
+      .client-logos {
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 40%;
+        img {
+          opacity: 0.7;
+          &:hover {
+            transition: 0.5s;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .team-sec {
+    padding-top: 20px;
+    background-color: black;
+    p {
+      color: white;
+      margin-bottom: 0px;
+    }
+    h1 {
+      color: white;
+      font-size: 45px;
+    }
+    .team-content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .team-card {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .cards {
+        width: 630px;
+        height: 320px;
+        background-color: #131212;
+        display: flex;
+        margin-top: 30px;
+
+        .card-img {
+          width: 350px;
+          overflow: hidden;
+
+          &:hover img {
+            transition: 1s;
+            transform: scale(1.1);
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .card-txt {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          padding: 30px;
+          h4 {
+            color: white;
+          }
+          p {
+            color: rgb(210, 211, 213);
+            font-size: 16px;
+            font-family: "poppins";
+          }
+          .social-icons {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+            div {
+              border: 1px solid white;
+              width: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 50px;
+              border-radius: 50%;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .timer-sec {
+    height: 120vh;
+    background: url("https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/background-4-rtv-copyright.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 22px;
+      color: rgb(210, 211, 213);
+      margin-bottom: 0px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 55px;
+      color: white;
+    }
+    button {
+      margin-top: 40px;
+      border: 0px;
+      height: 60px;
+      border-radius: 30px;
+      width: 180px;
+      background-color: rgb(254, 178, 0);
+      color: white;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .timer {
+      display: flex;
+      margin-top: 30px;
+      align-items: center;
+      gap: 40px;
+      .time {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        div {
+          width: 30px;
+          border: 1px solid white;
+          h1 {
+            font-size: 50px;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+  .articles {
+    background-color: black;
+    width: 100%;
+    p {
+      color: white;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+    }
+    .articles-sec {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      .article-txt {
+        width: 600px;
+      }
+      .article-card {
+        display: flex;
+        margin-top: 30px;
+
+        .img-card {
+          img {
+            width: 207px;
+            height: 207px;
+          }
+        }
+        .card-txt {
+          padding-left: 20px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          p {
+            color: white;
+          }
+          h3 {
+            color: white;
+          }
+        }
+      }
+      .article-table {
+        width: 50%;
+        table {
+          width: 100%;
+          th {
+            background-color: #1c1c1c;
+            color: white;
+            font-size: 22px;
+            padding: 20px;
+          }
+          tr {
+            &:nth-child(odd) {
+              background-color: #131212;
+            }
+            td {
+              padding-top: 10px;
+              padding-left: 20px;
+              font-size: 18px;
+              color: white;
+              padding-top: 20px;
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//responsive section//
+
+@media screen and (max-width: 1402px) {
+  .homepage .articles .articles-sec .article-table {
+    width: 100%;
+  }
+  .homepage .clint-sec .client-contet .client-txt {
+    gap: 20px;
+  }
+  .homepage {
+    .header-content {
+      h1 {
+        width: 100%;
+        font-size: 50px;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .articles .articles-sec .article-table {
+    margin-top: 30px;
+    width: 100% !important;
+  }
+  .homepage .timer-sec {
+    font-size: 45px;
+    .timer {
+      .time {
+        h1 {
+          font-size: 45px;
+        }
+      }
+    }
+  }
+  .homepage .team-sec .team-content {
+    padding-bottom: 10px;
+  }
+  .homepage .team-sec .team-content .cards {
+    width: 100%;
+    height: 100%;
+    .card-img {
+      width: 100%;
+    }
+  }
+  .homepage .about-sec .about-content .about-img .about-img-1 {
+    width: 350px;
+    height: 350px;
+  }
+  .homepage .about-sec .about-content .about-img .about-img-2 {
+    width: 350px;
+    height: 350px;
+  }
+  .homepage .about-sec .about-content .about-txt {
+    height: 100%;
+    padding: 50px;
+  }
+  .homepage .about-sec .about-content .about-img {
+    height: 600px;
+    padding: 50px;
+  }
+  .homepage .clint-sec .client-contet .client-txt {
+    align-items: center;
+    justify-content: center;
+  }
+  .bonus-sec {
+    .bonus-content {
+      .bonus-box {
+        gap: 20px;
+        .box {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .homepage .timer-sec {
+    padding: 20px;
+    font-size: 30px;
+    .timer {
+      gap: 20px;
+      .time {
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .inbox-sec .inbox-content .email-box input {
+    width: 100%;
+    font-size: 16px !important;
+    padding-left: 20px;
+    color: white;
+    font-weight: 600;
+    background-color: #131212;
+    border: 0px;
+  }
+  .inbox-sec .inbox-content .email-box {
+    width: 100%;
+  }
+  .inbox-sec .inbox-content .email-box button {
+    font-size: 12px;
+    width: 160px !important;
+  }
+  .homepage .bonus-sec .bonus-content p {
+    width: 100% !important;
+  }
+  .homepage .about-sec .about-content .about-img .about-img-1 {
+    width: 250px;
+    height: 250px;
+  }
+  .homepage .about-sec .about-content .about-img .about-img-2 {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .homepage .features-sec .features-box .box {
+    width: 100%;
+  }
+  .homepage .features-sec .features-contant p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  .homepage .about-sec .about-content .about-img .about-img-1 {
+    width: 200px;
+    height: 200px;
+  }
+  .homepage .about-sec .about-content .about-img .about-img-2 {
+    width: 200px;
+    height: 200px;
+  }
+  .inbox-sec .inbox-content h2 {
+    color: white;
+    font-size: 30px !important;
+  }
+  .homepage .timer-sec h1 {
+    font-size: 36px;
+  }
+  .homepage .timer-sec .timer {
+    gap: 0px;
+  }
+  .homepage .timer-sec .timer {
+    gap: 0px;
+  }
+  .homepage .team-sec .team-content .cards .card-txt .social-icons div {
+    border: 1px solid white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 50%;
+    color: white;
+    padding: 7px;
+  }
+  .footers .footer-content .footer-links {
+    gap: 10px !important;
+  }
+  .homepage .articles .articles-sec .article-card .img-card img {
+    width: 180px;
+    height: 180px;
+  }
+}
