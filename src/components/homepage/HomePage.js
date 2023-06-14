@@ -8,6 +8,8 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import temp from '../../dummyData'
+import Slider from "react-slick";
 
 const HomePage = () => {
   function reveal() {
@@ -27,102 +29,158 @@ const HomePage = () => {
   }
   window.addEventListener("scroll", reveal);
   console.log(reveal, 'revals');
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
   return (
     <>
       <div className='homepage'>
         <div className='header-sec'>
-        <div className='container'>
-          <div className='header-content'>
-            <h1>
-              Fresh cryptoworld news & trends
-            </h1>
-            <p>Stay ahead of the cryptocurrency tendencies with our expert news and updates.</p>
+          <div className='container'>
+            <div className='header-content'>
+              <h1>
+                Fresh cryptoworld news & trends
+              </h1>
+              <p>Stay ahead of the cryptocurrency tendencies with our expert news and updates.</p>
+            </div>
           </div>
         </div>
-        </div>
         <div className='about-sec'>
+          <h3>Davinci Benefits</h3>
+          <p>Enjoy the full flexibility of the platform with ton of features</p>
           <div className='container'>
             <div className='about-content'>
-              <div className='about-img'>
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/img-1-rtv-copyright.jpg' className='about-img-1' />
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/img-2-rtv-copyright.jpg' className='about-img-2' />
+              <div className='cols-1'>
+                <div className='card'>
+                  <img />
+                  <p>Latest AI technology</p>
+                  <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                </div>
+                <div className='card'>
+                  <img />
+                  <p>Latest AI technology</p>
+                  <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                </div>
+                <div className='card'>
+                  <img />
+                  <p>Latest AI technology</p>
+                  <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                </div>
               </div>
-              <div className='about-txt'>
-                <p>WHAT WE DO</p>
-                <h1>We develop & create digital future</h1>
-                <p>We appreciate your trust greatly. Our clients choose us and our products because they know we are the best.</p>
-                <button>About us</button>
+              <div className='cols-2'>
+                <div className='card'>
+                  <img />
+                  <p>Latest AI technology</p>
+                  <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                </div>
+                <div className='card'>
+                  <img />
+                  <p>Latest AI technology</p>
+                  <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                </div>
+                <div className='card'>
+                  <img />
+                  <p>Latest AI technology</p>
+                  <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
+                </div>
               </div>
+              <div className='benifit-text'>
+                <h3> <span style={{ color: 'rgb(254, 178, 0)' }}>Davinci</span> Uses most sophisticated Artificial Intelligence Technology</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quibusdam? Illum ad eius, molestiae placeat dicta quae, ab nihil omnis obcaecati reiciendis recusandae, voluptatem eos molestias aliquam saepe tenetur optio? Consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ea et, error quisquam corporis, architecto minus doloremque aut facere itaque culpa eos molestias nulla reiciendis animi dolores, quod sunt illum.</p>
+              </div>
+
             </div>
           </div>
         </div>
         <div className='bonus-sec'>
           <div className='container' style={{ height: '100%' }}>
             <div className='bonus-content'>
-              <h1>
-                Presale Bonuses: 50%
-              </h1>
-              <p>If you are looking to invest in cryptocurrency, we are ready to support and provide a discount for presales!</p>
-              <div className='bonus-box'>
-                <div className='box'>
-                  <div className='bonus-pracentage'>
-                    <h1>35%</h1>
-                  </div>
-                  <p>1 day only. Invest now and get
-                    1500 QWR for one ETH</p>
-                  <p>1 ETH = 1500 QWR</p>
-                </div>
-                <div className='box'>
-                  <div className='bonus-pracentage' style={{ borderBottom: '15px solid rgb(254, 178, 0)', paddingBottom: '15.5px' }}>
-                    <h1>15%</h1>
-                  </div>
-                  <p>1 week. At this stage you can get 1200 QWR for one ETH</p>
-                  <p>1 ETH = 1200 QWR</p>
-                </div>
-                <div className='box'>
-                  <div className='bonus-pracentage' style={{ borderBottom: '10px solid rgb(254, 178, 0)', paddingBottom: '14.5px' }}>
-                    <h1>5%</h1>
-                  </div>
-                  <p>2 weeks.Get 1000 QWR for one ETH</p>
-                  <p>1 ETH = 1000 QWR</p>
-                </div>
-                <div className='box'>
-                  <div className='bonus-pracentage' style={{ borderBottom: '5px solid rgb(254, 178, 0)', paddingBottom: '13.5px' }}>
-                    <h1>Release Date</h1>
-                  </div>
-                  <p>Release Date
-                    Get 800 QWR for one ETH</p>
-                  <p>1 ETH = 800 QWR</p>
-                </div>
+              <h3>Davinci templets</h3>
+              <p>Enjoy the full flexibility of the platform with ton of features</p>
+              <div className='box-div'>
+                {temp.map((val) => {
+                  return <>
+                    <div className='box'>
+                      <img />
+                      <p>Blog Titles</p>
+                      <p>Nobody wants to read boring blog titles, generate catchy blog titles with this tool</p>
+                    </div>
+
+                  </>
+                })}
+
               </div>
             </div>
+
           </div>
         </div>
         <div className='features-sec'>
           <div className='container' style={{ height: '100%' }}>
             <div className='features-contant'>
-              <p>DIGITAL WORLD</p>
-              <h1>Our Super Features</h1>
-              <p>Our clients' experience is the main priority for us. Learn more about the premium digital features.</p>
+
+              <h1>Customer Reviews</h1>
+              <p>We guarantee that you will be one of our happy customers as well</p>
               <div className='features-box'>
-                <div className='box reveal fade-bottom'>
-                  <AccountBalanceWalletIcon style={{ width: '80px', height: '80px', color: '#F3335C' }} />
-                  <h2>Endless Possibilities </h2>
-                  <p>From now on, you can use our platform to enhance your cryptoprosperity.</p>
-                  <ArrowRightAltIcon style={{ color: 'white' }} />
-                </div>
-                <div className='box'>
-                  <CurrencyBitcoinIcon style={{ width: '80px', height: '80px', color: '#F3335C' }} />
-                  <h2>Endless Possibilities </h2>
-                  <p>From now on, you can use our platform to enhance your cryptoprosperity.</p>
-                  <ArrowRightAltIcon style={{ color: 'white' }} />
-                </div>
-                <div className='box'>
-                  <RequestPageIcon style={{ width: '80px', height: '80px', color: '#F3335C' }} />
-                  <h2>Endless Possibilities </h2>
-                  <p>From now on, you can use our platform to enhance your cryptoprosperity.</p>
-                  <ArrowRightAltIcon style={{ color: 'white' }} />
-                </div>
+
+
+
+                <Slider {...settings}>
+                  <div className='box'>
+                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
+                    <div classname="d-flex">
+                      <div style={{ width: '80px', height: '80px' }}>
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
+                      </div>
+                      <div className='d-flex flex-column'>
+                        <p>Emily Blunt</p>
+                        <p>IT Blogger</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='box'>
+                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
+
+                    <div classname="d-flex">
+                      <div style={{ width: '80px', height: '80px' }}>
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
+                      </div>
+                      <div className='d-flex flex-column'>
+                        <p>Emily Blunt</p>
+                        <p>IT Blogger</p>
+                      </div>
+                    </div>                  </div>
+                  <div className='box'>
+                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
+                    <div classname="d-flex">
+                      <div style={{ width: '80px', height: '80px' }}>
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
+                      </div>
+                      <div className='d-flex flex-column'>
+                        <p>Emily Blunt</p>
+                        <p>IT Blogger</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='box'>
+                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
+
+                    <div classname="d-flex">
+                      <div style={{ width: '80px', height: '80px' }}>
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
+                      </div>
+                      <div className='d-flex flex-column'>
+                        <p>Emily Blunt</p>
+                        <p>IT Blogger</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </Slider>
               </div>
             </div>
           </div>

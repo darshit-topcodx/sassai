@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&display=swap");
-
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 //animation sec=---------------------------------------
 @keyframes slidein {
   from {
@@ -63,53 +64,85 @@
   .about-sec {
     background-color: black;
     height: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+
     .about-content {
+      padding-top: 30px;
       display: flex;
+      gap: 40px;
+      justify-content: space-between;
       flex-wrap: wrap;
-      justify-content: center;
-      .about-img {
-        position: relative;
-        width: 590px;
-        height: 730px;
-        .about-img-1 {
-          top: 60px;
-          position: absolute;
-          width: 450px;
-          height: 450px;
-        }
-        .about-img-2 {
-          position: absolute;
-          top: 200px;
-          left: 130px;
-          width: 450px;
-          height: 450px;
-        }
-      }
-      .about-txt {
-        height: 730px;
-        width: 590px;
+      .cols-1 {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 50px;
-        p {
+        gap: 20px;
+        .card {
+          width: 400px;
+          height: 250px;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          align-items: self-start;
+          justify-content: center;
+          background-color: #272320;
+          box-shadow: 8px 8px 0px rgba(39, 35, 32, 0.3) !important;
           color: white;
-          font-size: 20px;
+          p:nth-of-type(1) {
+            text-align: start;
+            color: rgb(254, 178, 0);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+          p {
+            text-align: start;
+          }
         }
-        h1 {
+      }
+      .cols-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 50px;
+        .card {
+          width: 400px;
+          height: 250px;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          align-items: self-start;
+          justify-content: center;
+          background-color: #272320;
+          box-shadow: 8px 8px 0px rgba(39, 35, 32, 0.3) !important;
           color: white;
+          p:nth-of-type(1) {
+            text-align: start;
+            color: rgb(254, 178, 0);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+          p {
+            text-align: start;
+          }
         }
-        button {
-          margin-top: 20px;
-          border: 0px;
-          height: 50px;
-          border-radius: 25px;
-          width: 140px;
-          background-color: rgb(254, 178, 0);
-          color: white;
-          font-weight: 600;
-        }
+      }
+    }
+    .benifit-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: 320px;
+      gap: 20px;
+      h3 {
+        text-align: start;
+      }
+      p {
+        text-align: start;
+        font-size: 18px;
       }
     }
   }
@@ -122,45 +155,36 @@
     background-size: cover;
     padding-top: 150px;
     padding-bottom: 230px;
-
     .bonus-content {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: start;
-      h1 {
-        color: white;
-        font-size: 40px;
-      }
-      p {
-        font-size: 22px;
-        width: 50%;
-        color: rgb(210, 211, 213);
-      }
-      .bonus-box {
+      align-items: center;
+      color: white;
+      .box-div {
         margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        gap: 20px;
         .box {
-          width: 322px;
+          width: 400px;
+          height: 150px;
           display: flex;
-          align-items: start;
           flex-direction: column;
-          .bonus-pracentage {
-            width: 100%;
-            padding-bottom: 15px;
-            border-bottom: 25px solid rgb(254, 178, 0);
+          justify-content: center;
+          border-radius: 10px;
+          background-color: #272320 !important;
+          padding: 15px;
+          box-shadow: 8px 8px 0px rgba(39, 35, 32, 0.3) !important;
+          p:nth-of-type(1) {
+            font-weight: 600;
+            color: rgb(254, 178, 0);
           }
           p {
-            margin-top: 20px;
-            color: rgb(210, 211, 213);
             margin-bottom: 0px;
-
-            font-size: 20px;
-            width: 80%;
           }
         }
       }
@@ -168,29 +192,24 @@
   }
 
   .features-sec {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: black;
     .features-contant {
       height: 100%;
-      display: flex;
-      flex-direction: column;
       align-items: center;
       h1 {
         color: white;
       }
       p {
         color: white;
-        font-size: 22px;
+        font-size: 20px;
       }
     }
     .features-box {
-      display: flex;
       justify-content: space-around;
       align-items: center;
-      flex-wrap: wrap;
 
       margin-top: 80px;
       .box {
@@ -200,14 +219,41 @@
         padding: 20px;
         padding-bottom: 40px;
         width: 430px;
-        display: flex;
+
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 20px;
-        &:hover {
-          background-color: #131212;
-          transition: 0.5s;
+        div {
+          margin-top: 20px;
+          p {
+            margin-left: 20px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .slick-arrow {
+        height: 40px !important;
+        width: 40px !important;
+        border-radius: 50%;
+        background-color: white;
+      }
+      .slick-prev {
+        left: -50px !important;
+        &::before {
+          content: "<";
+          color: blue;
+          text-align: center;
+          width: 150px !important;
+        }
+      }
+      .slick-next {
+        right: -50px !important;
+        &::before {
+          content: ">";
+          color: blue;
+          text-align: center;
+          width: 150px !important;
         }
       }
     }
