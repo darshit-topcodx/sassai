@@ -10,6 +10,7 @@ const Navbar = () => {
 
     return (
         <>
+        abc-xyz
             <div className='Navbar'>
                 <div className='logo'>
                     <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/logo-inverse.png' />
