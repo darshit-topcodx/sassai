@@ -36,7 +36,23 @@ const HomePage = () => {
       }
     }
   }
-  window.addEventListener("scroll", reveal1);
+  window.addEventListener("scroll", reveal);
+  function reveal2() {
+    var reveals1 = document.querySelectorAll(".blog-box");
+
+    for (var i = 0; i < reveals1.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals1[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals1[i].classList.add("active");
+      } else {
+        reveals1[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal2);
   const settings = {
     dots: true,
     infinite: false,

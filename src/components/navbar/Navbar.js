@@ -5,6 +5,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 const Navbar = () => {
     const [toggle, settoggle] = useState(null);
+    const [closeToggle,setCloseToggle] = useState(true);
+    const handleClose =()=>{
+        document.getElementById("close_toggle").classList.add("close-res-nav")
+        settoggle(null)
+        setTimeout(()=>{
+            document.getElementById("close_toggle").classList.remove("close-res-nav")
+            document.getElementById("close_toggle").classList.remove("res-close-nav")
+        },700)
+    }
+
+    const handOpen=()=>{
+        document.getElementById("close_toggle").classList.add("res-close-nav")
+    }
+
     return (
         <>
             <div className='Navbar'>
@@ -25,13 +39,13 @@ const Navbar = () => {
                 </div>
                 <div className='res-nav' style={{ color: 'white', width: '50px', height: '30px', color: 'white' }}>
                     <SearchIcon style={{ color: 'white', width: '50px', height: '30px' }} />
-                    <MenuIcon onClick={() => { settoggle(true) }} />
+                    <MenuIcon onClick={handOpen} />
                 </div>
             </div>
-            <div className={`${toggle ? 'res-div' : 'close-res-nav'}`}>
+            <div id='close_toggle' className='res-div'>
                 <div className='w-100 d-flex justify-content-between p-3'>
                     <h1>DAVINCI</h1>
-                    <CloseIcon style={{ color: 'white', width: '50px', height: '30px' }} onClick={() => { settoggle(null) }} />
+                    <CloseIcon style={{ color: 'white', width: '50px', height: '30px' }} onClick={handleClose} />
                 </div>
                 <div className='d-flex flex-column gap-2 justify-content-center w-100 align-items-center mt-3 link'>
                     <p className='cool-link'>Home</p>
