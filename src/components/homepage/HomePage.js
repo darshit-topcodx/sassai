@@ -1,16 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './homepage.scss'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
-import RequestPageIcon from '@mui/icons-material/RequestPage';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import temp from '../../dummyData'
 import Slider from "react-slick";
-
+import { Prepaid, MonthlyPLan, YearlyPLan } from '../../dummyData';
+import Backimg from '../../images/abcpqr.svg'
 const HomePage = () => {
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
@@ -31,11 +24,112 @@ const HomePage = () => {
   console.log(reveal, 'revals');
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   };
+  const settings2 = {
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      ,
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  };
+
+  const [activePlans, setActivePlans] = useState('Monthly Plans')
   return (
     <>
       <div className='homepage'>
@@ -153,7 +247,8 @@ const HomePage = () => {
                         <p>Emily Blunt</p>
                         <p>IT Blogger</p>
                       </div>
-                    </div>                  </div>
+                    </div>
+                  </div>
                   <div className='box'>
                     <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
                     <div classname="d-flex">
@@ -189,194 +284,237 @@ const HomePage = () => {
           <div className='container' style={{ height: '100%' }}>
             <div className='client-contet'>
               <div className='client-txt'>
-                <p>WHO WE WORK WITH</p>
-                <h1>WHO WE WORK WITH Meet Our Clients</h1>
-                <p>These companies choose our service because they trust the technology as well as appreciate our perspicacity.</p>
+                <p>Our <span style={{ color: 'rgb(254, 178, 0)' }}>Partners</span></p>
+                <p>Be among the many that trust us</p>
               </div>
-              <div className='client-logos'>
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-2-copyright.png' />
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-6-copyright.png' />
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-5-copyright.png' />
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-3-copyright.png' />
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-4-copyright.png' />
-                <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-1-copyright.png' />
-              </div>
+              <Slider {...settings2} className='mt-5'>
+                <div style={{ textAlign: 'center' }}>
+                  <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-2-copyright.png' style={{ width: '200px', height: '100px' }} />
+                </div>
+                <div>
+                  <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-6-copyright.png' style={{ width: '200px', height: '100px' }} />
+                </div>
+                <div>
+                  <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-5-copyright.png' style={{ width: '200px', height: '100px' }} />
+                </div>
+                <div>
+                  <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-3-copyright.png' style={{ width: '200px', height: '100px' }} />
+                </div>
+                <div>
+                  <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-4-copyright.png' style={{ width: '200px', height: '100px' }} />
+                </div>
+                <div>
+                  <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-1-copyright.png' style={{ width: '200px', height: '100px' }} />
+                </div>
+              </Slider>
+
             </div>
           </div>
         </div>
         <div className='team-sec'>
           <div className='container'>
             <div className='team-content'>
-              <p>EXPERTS</p>
-              <h1>This Is Our Team</h1>
-              <div className='team-card'>
-                <div className='cards'>
-                  <div className='card-img'>
-                    <img src='https://4kwallpapers.com/images/wallpapers/beautiful-girl-beautiful-woman-portrait-black-background-3840x2560-2937.jpg' />
-
-                  </div>
-                  <div className='card-txt'>
-                    <h4>Amy walker</h4>
-                    <p>Project manager</p>
-                    <p style={{ marginTop: '20px' }}>Innovations become accessible with our blog</p>
-                    <div className='social-icons'>
-                      <div><FacebookOutlinedIcon /></div>
-                      <div><TwitterIcon /></div>
-                      <div><SportsBasketballIcon /></div>
-                      <div> <InstagramIcon /> </div>
+              <p>Various Subscription Plans</p>
+              <p>Most competitive prices are guaranteed</p>
+              <div className='select-sec'>
+                <button onClick={() => { setActivePlans('Prepaid Plans') }} className={`${activePlans === 'Prepaid Plans' && 'active-button'}`}>Prepaid Plans</button>
+                <button onClick={() => { setActivePlans('Monthly Plans') }} className={`${activePlans === 'Monthly Plans' && 'active-button'}`}>Monthly Plans</button>
+                <button onClick={() => { setActivePlans('Yearly Plans') }} className={`${activePlans === 'Yearly Plans' && 'active-button'}`}>Yearly Plans</button>
+              </div>
+              <div className='plans'>
+                {activePlans === 'Prepaid Plans' && Prepaid.map((val) => {
+                  return <>
+                    <div className='plans-card-1'>
+                      <div className='d-flex justify-content-between'>
+                        <h2>{val.size}</h2>
+                        <h2><sup>$</sup>{val.price}<sup>usd</sup></h2>
+                      </div>
+                      <p>Words Included: <span style={{ color: 'rgb(254, 178, 0)' }}>{val.words}</span></p>
+                      <p>Images Included: <span style={{ color: 'rgb(254, 178, 0)' }}>{val.images}</span></p>
+                      <button>PURCHASE</button>
                     </div>
-                  </div>
-                </div>
-                <div className='cards'>
-                  <div className='card-img'>
-                    <img src='https://4kwallpapers.com/images/wallpapers/beautiful-girl-beautiful-woman-portrait-black-background-3840x2560-2937.jpg' />
+                  </>
+                })}
+                {activePlans === 'Monthly Plans' && MonthlyPLan.map((val) => {
+                  return <>
+                    <div className='plans-card-2'>
+                      <h3>{val.title}</h3>
+                      <h1>{val.price}</h1>
+                      <p>USD / Month</p>
+                      <button>Subscribe</button>
+                      <ul>
+                        {
 
-                  </div>
-                  <div className='card-txt'>
-                    <h4>Amy walker</h4>
-                    <p>Web Developer</p>
-                    <p style={{ marginTop: '20px' }}>Innovations become accessible with our blog</p>
-                    <div className='social-icons'>
-                      <div><FacebookOutlinedIcon /></div>
-                      <div><TwitterIcon /></div>
-                      <div><SportsBasketballIcon /></div>
-                      <div> <InstagramIcon /> </div>
+                          val.list.map((val) => {
+                            return <>
+                              <div style={{ textAlign: 'start' }}>
+                                <li>{val}</li>
+                              </div>
+                            </>
+                          })}
+
+                      </ul>
                     </div>
-                  </div>
-                </div>
+                  </>
+                })}
+                {activePlans === 'Yearly Plans' && YearlyPLan.map((val) => {
+                  return <>
+                    <div className='plans-card-3'>
+                      <h3>{val.title}</h3>
+                      <h1>{val.price}</h1>
+                      <p>USD / Month</p>
+                      <button>Subscribe</button>
+                      <ul>
+                        {
+
+                          val?.list.map((val) => {
+                            return <>
+                              <div style={{ textAlign: 'start' }}>
+                                <li>{val}</li>
+                              </div>
+                            </>
+                          })}
+
+                      </ul>
+                    </div>
+                  </>
+                })}
               </div>
             </div>
           </div>
         </div>
-        <div className='timer-sec'>
 
-          <div className='ab-div'></div>
-          <p>FASTEN YOUR SEATBELTS</p>
-          <h1>Qwery Skyrockets in :</h1>
-          <div className='timer'>
-            <div className='time'>
-              <h1>170</h1>
-              <div></div>
-              <p>Days</p>
-            </div>
-            <div className='coln'><h1>:</h1></div>
-            <div className='time'>
-              <h1>12</h1>
-              <div></div>
-              <p>Hours</p>
-            </div>
-            <div className='coln'><h1>:</h1></div>
-            <div className='time'>
-              <h1>06</h1>
-              <div></div>
-              <p>Minutes</p>
-            </div>
-            <div className='coln'><h1>:</h1></div>
-            <div className='time'>
-              <h1>56</h1>
-              <div></div>
-              <p>Seconds</p>
-            </div>
+        <div className='blog-sec'>
+          <div className='container'>
+            <p><span style={{ color: 'rgb(254, 178, 0)' }}>Latest</span> Blogs</p>
+            <p>Read our unique blog articles about various data archiving solutions and secrets</p>
+            <Slider {...settings} className='mt-5 pb-5'>
+              <div className='blog-box'>
+                <img src='https://openaidavinci.textract.ai/img/blogs/VM8npkhmA3.jpg' />
+                <p>Crazy Robot | 13 February 2023</p>
+                <h5>Natural Language Processors</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci te...</p>
+              </div>
+              <div className='blog-box'>
+                <img src='https://openaidavinci.textract.ai/img/blogs/xgVz3KGyzf.jpg' />
+                <p>Crazy Robot | 13 February 2023</p>
+                <h5>Natural Language Processors</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci te...</p>
+              </div>
+              <div className='blog-box'>
+                <img src='https://openaidavinci.textract.ai/img/blogs/VwMpV4zthi.jpg' />
+                <p>Crazy Robot | 13 February 2023</p>
+                <h5>Natural Language Processors</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci te...</p>
+              </div>
+              <div className='blog-box'>
+                <img src='https://openaidavinci.textract.ai/img/blogs/VM8npkhmA3.jpg' />
+                <p>Crazy Robot | 13 February 2023</p>
+                <h5>Natural Language Processors</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci te...</p>
+              </div>
+            </Slider>
           </div>
-          <button>Stay Ahead</button>
         </div>
         <div className='articles'>
           <div className='container'>
             <div className='articles-sec'>
-              <div className='article-txt'>
-                <p>DIGITAL BLOG</p>
-                <h1>Recent Articles</h1>
-                <div className='article-card'>
-                  <div className='img-card'>
-                    <img src='https://images.unsplash.com/photo-1620266757065-5814239881fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dHJhZGluZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80' />
-                  </div>
-                  <div className='card-txt'>
-                    <p>BLOG <span>Apr 1,2023</span></p>
-                    <h3>Brainstorm tips for cryptocurrency analytics</h3>
-                  </div>
-                </div>
-                <div className='article-card'>
-                  <div className='img-card'>
-                    <img src='https://images.unsplash.com/photo-1623227413711-25ee4388dae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJpdGNvaW58ZW58MHx8MHx8fDA%3D&w=1000&q=80' />
-                  </div>
-                  <div className='card-txt'>
-                    <p>BLOG <span>Apr 1,2023</span></p>
-                    <h3>5 simple steps to organize your charts and reports</h3>
+              <p>Frequently Asked Questions</p>
+              <p>Got questions? We have you covered.</p>
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      What Davinci uses behind?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Davinci is fully powered by OpenAI GPT3 and DALLE services.</div>
                   </div>
                 </div>
-                <div className='article-card'>
-                  <div className='img-card'>
-                    <img src='https://images.moneycontrol.com/static-mcnews/2022/05/cryptocurrency.jpg?impolicy=website&width=1600&height=900' />
-                  </div>
-                  <div className='card-txt'>
-                    <p>BLOG <span>Apr 1,2023</span></p>
-                    <h3>Cryptocurrency marketing courses for beginners</h3>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+
+                      Do  I have to pay for OpenAI services?
+
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Yes you do. Upon exceeding their free 18$, you will be charged based on your usage at the end of each month.</div>
                   </div>
                 </div>
-              </div>
-              <div className='article-table'>
-                <table>
-                  <tr>
-                    <th style={{ width: '100%' }}>Company</th>
-                    <th >Price</th>
-                    <th>24H(%)</th>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><img src='https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307_1280.png' style={{ width: '30px', height: '30px' }} /> Bitcoin (BTC)</td>
-                    <td>$27,221.00</td>
-                    <td style={{ color: '#7CD420' }}>0.19%</td>
-                  </tr>
-                </table>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+
+                      Which OpenAI models Davinci uses?
+
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Davinci uses all 4 OpenAI models including DALLE for generating images. </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      Will there be new templates added?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Yes, we have plans to add more than 100+ templates with future updates. </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      What kind of payment gateways does Davinci supports?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Davinci supports 8 different payment gateways, 6 can be used for both Prepaid and Subscription plans. Refer to the description to get the exact list. </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      Should we be afraid of AI?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Don't know, I suggest you to reach out to Elon Must. That "alien" for sure knows something. </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        <div className='contact-sec'>
+          <p><span style={{ color: 'rgb(254, 178, 0)' }}>Contact</span> With Us</p>
+          <p>Reach out to us for additional information</p>
+          <div className='container'>
+            <div className='contact-content'>
+              <img src='https://rb-campus-clutch-c9-stg.herokuapp.com/img/loop-scroll-content/map-base.svg' className='back-img' />
+              <div className='img-svg'>
+                <img src={Backimg} />
+              </div>
+              <div className='contact-field'>
+                <div>
+                  <input placeholder='First Name' />
+                  <input placeholder='Last Name' />
+                  <input placeholder='Email Address' />
+                  <input placeholder='Phone Number' />
+                </div>
+                <textarea placeholder='Message' />
+                <button>Send Message</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
     </>
   )
