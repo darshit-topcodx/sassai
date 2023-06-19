@@ -21,7 +21,22 @@ const HomePage = () => {
     }
   }
   window.addEventListener("scroll", reveal);
-  console.log(reveal, 'revals');
+  function reveal1() {
+    var reveals1 = document.querySelectorAll(".accordion");
+
+    for (var i = 0; i < reveals1.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals1[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals1[i].classList.add("active");
+      } else {
+        reveals1[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal1);
   const settings = {
     dots: true,
     infinite: false,
@@ -224,19 +239,19 @@ const HomePage = () => {
 
 
                 <Slider {...settings}>
-                  <div className='box'>
+                  <div className='box reveal'>
                     <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
                     <div classname="d-flex">
                       <div style={{ width: '80px', height: '80px' }}>
                         <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
                       </div>
-                      <div className='d-flex flex-column'>
+                      <div className='d-flex flex-column reveal'>
                         <p>Emily Blunt</p>
                         <p>IT Blogger</p>
                       </div>
                     </div>
                   </div>
-                  <div className='box'>
+                  <div className='box reveal'>
                     <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
 
                     <div classname="d-flex">
@@ -249,7 +264,7 @@ const HomePage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className='box'>
+                  <div className='box reveal'>
                     <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
                     <div classname="d-flex">
                       <div style={{ width: '80px', height: '80px' }}>
@@ -261,7 +276,7 @@ const HomePage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className='box'>
+                  <div className='box reveal'>
                     <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
 
                     <div classname="d-flex">
@@ -288,22 +303,22 @@ const HomePage = () => {
                 <p>Be among the many that trust us</p>
               </div>
               <Slider {...settings2} className='mt-5'>
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ textAlign: 'center' }} className='reveal'>
                   <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-2-copyright.png' style={{ width: '200px', height: '100px' }} />
                 </div>
-                <div>
+                <div className='reveal'>
                   <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-6-copyright.png' style={{ width: '200px', height: '100px' }} />
-                </div>
-                <div>
+                </div >
+                <div className='reveal'>
                   <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-5-copyright.png' style={{ width: '200px', height: '100px' }} />
                 </div>
-                <div>
+                <div className='reveal'>
                   <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-3-copyright.png' style={{ width: '200px', height: '100px' }} />
                 </div>
-                <div>
+                <div className='reveal'>
                   <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-4-copyright.png' style={{ width: '200px', height: '100px' }} />
-                </div>
-                <div>
+                </div >
+                <div className='reveal'>
                   <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/client-1-copyright.png' style={{ width: '200px', height: '100px' }} />
                 </div>
               </Slider>

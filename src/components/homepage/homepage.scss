@@ -210,9 +210,8 @@
       justify-content: space-around;
       align-items: center;
       margin-top: 80px;
-      
-      .box {
 
+      .box {
         h2 {
           color: white;
         }
@@ -237,7 +236,7 @@
           }
         }
       }
-    
+
       // .slick-arrow {
       //   height: 40px !important;
       //   width: 40px !important;
@@ -569,6 +568,10 @@
     }
   }
 }
+
+.accordion.active {
+  animation: 0.8s slidein;
+}
 .contact-sec {
   padding-top: 50px;
   color: white;
@@ -676,13 +679,11 @@
 @media screen and (max-width: 750px) {
   .slick-prev {
     left: 20px !important;
-  display: none !important;
-  
+    display: none !important;
   }
   .slick-next {
     right: 20px !important;
     display: none !important;
-    
   }
   .contact-sec .contact-content .img-svg {
     img {
@@ -749,7 +750,6 @@
   }
 }
 @media screen and (max-width: 600px) {
-  
   .homepage .timer-sec {
     padding: 20px;
     font-size: 30px;
@@ -766,8 +766,6 @@
     }
   }
 }
-
-
 
 @media screen and (max-width: 520px) {
   .homepage .blog-sec .blog-box {
@@ -806,7 +804,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .homepage .about-sec .about-content .cols-1 .card{
+  .homepage .about-sec .about-content .cols-1 .card {
     width: 100% !important;
   }
   .homepage .bonus-sec .bonus-content .box-div .box {

@@ -24,22 +24,22 @@ const Navbar = () => {
                     <button>Let's Talk</button>
                 </div>
                 <div className='res-nav' style={{ color: 'white', width: '50px', height: '30px', color: 'white' }}>
-                    <SearchIcon style={{ color: 'white', width: '50px', height: '30px' }}  />
-                    <MenuIcon onClick={() => { settoggle(true) }}/>
+                    <SearchIcon style={{ color: 'white', width: '50px', height: '30px' }} />
+                    <MenuIcon onClick={() => { settoggle(true) }} />
                 </div>
             </div>
             <div className={`${toggle ? 'res-div' : 'close-res-nav'}`}>
                 <div className='w-100 d-flex justify-content-between p-3'>
                     <h1>DAVINCI</h1>
-                    <CloseIcon   style={{ color: 'white', width: '50px', height: '30px' }} onClick={() => { settoggle(null) }}/>
+                    <CloseIcon style={{ color: 'white', width: '50px', height: '30px' }} onClick={() => { settoggle(null) }} />
                 </div>
-                    <div className='d-flex flex-column gap-2 justify-content-center w-100 align-items-center mt-3 link'>
-                        <p className='cool-link'>Home</p>
-                        <p className='cool-link'>Pages</p>
-                        <p className='cool-link'>Protfolio</p>
-                        <p className='cool-link'>Blog</p>
-                        <p className='cool-link'>Contacts</p>
-                    </div>
+                <div className='d-flex flex-column gap-2 justify-content-center w-100 align-items-center mt-3 link'>
+                    <p className='cool-link'>Home</p>
+                    <p className='cool-link'>Pages</p>
+                    <p className='cool-link'>Protfolio</p>
+                    <p className='cool-link'>Blog</p>
+                    <p className='cool-link'>Contacts</p>
+                </div>
 
 
             </div>

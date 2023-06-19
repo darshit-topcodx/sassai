@@ -104,6 +104,19 @@
     transform: translateY(-500px);
   }
 }
+.reveal{
+  position: relative;
+  transform: rotateX(90deg);
+  opacity: 0;
+  transition: 0.7s all ease;
+}
+
+.reveal.active{
+  transform: rotateX(0deg); 
+  opacity: 1;
+}
+
+
 
 @media screen and (max-width: 1000px) {
   .Navbar {
