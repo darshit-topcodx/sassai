@@ -749,6 +749,7 @@
   }
 }
 @media screen and (max-width: 600px) {
+  
   .homepage .timer-sec {
     padding: 20px;
     font-size: 30px;
@@ -805,6 +806,9 @@
 }
 
 @media screen and (max-width: 450px) {
+  .homepage .about-sec .about-content .cols-1 .card{
+    width: 100% !important;
+  }
   .homepage .bonus-sec .bonus-content .box-div .box {
     width: 100%;
   }

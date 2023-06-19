@@ -107,7 +107,7 @@ const templet = [
         img: '',
         title: 'Nobody wants to read boring blog titles, generate catchy blog titles with this tool'
     }
- 
+
 ]
 
 export const Prepaid = [
@@ -134,7 +134,7 @@ export const Prepaid = [
         size: '50000x1000',
         price: '59.99',
         words: '50,000',
-        images: '1000'
+        images: '1000'  
     }
 
 ]
@@ -177,7 +177,7 @@ export const YearlyPLan = [
     {
         title: 'Super',
         price: '$199.99',
-        list:[]
+        list: []
     }
 
 
