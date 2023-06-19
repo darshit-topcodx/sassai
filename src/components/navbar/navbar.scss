@@ -23,7 +23,7 @@
       display: flex;
       justify-content: space-between;
       gap: 30px;
-      p {
+      a {
         margin-bottom: 0px;
         font-size: 19px;
         font-weight: 600;
@@ -83,6 +83,10 @@
   .link {
     color: white;
     font-size: 18px;
+    a{
+      color: white;
+      text-decoration: none;
+    }
   }
   h1 {
     color: white;

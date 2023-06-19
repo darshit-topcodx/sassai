@@ -36,19 +36,21 @@ const HomePage = () => {
       }
     }
   }
-  window.addEventListener("scroll", reveal);
-  function reveal2() {
-    var reveals1 = document.querySelectorAll(".blog-box");
 
-    for (var i = 0; i < reveals1.length; i++) {
+  window.addEventListener("scroll", reveal1);
+
+  function reveal2() {
+    var reveals2 = document.querySelectorAll(".blog-box");
+
+    for (var i = 0; i < reveals2.length; i++) {
       var windowHeight = window.innerHeight;
-      var elementTop = reveals1[i].getBoundingClientRect().top;
+      var elementTop = reveals2[i].getBoundingClientRect().top;
       var elementVisible = 150;
 
       if (elementTop < windowHeight - elementVisible) {
-        reveals1[i].classList.add("active");
+        reveals2[i].classList.add("active");
       } else {
-        reveals1[i].classList.remove("active");
+        reveals2[i].classList.remove("active");
       }
     }
   }
@@ -164,7 +166,7 @@ const HomePage = () => {
   return (
     <>
       <div className='homepage'>
-        <div className='header-sec'>
+        <div className='header-sec' id='header-sec'>
           <div className='container'>
             <div className='header-content'>
               <h1>
@@ -259,32 +261,7 @@ const HomePage = () => {
                     <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
                     <div classname="d-flex">
                       <div style={{ width: '80px', height: '80px' }}>
-                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
-                      </div>
-                      <div className='d-flex flex-column reveal'>
-                        <p>Emily Blunt</p>
-                        <p>IT Blogger</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='box reveal'>
-                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
-
-                    <div classname="d-flex">
-                      <div style={{ width: '80px', height: '80px' }}>
-                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
-                      </div>
-                      <div className='d-flex flex-column'>
-                        <p>Emily Blunt</p>
-                        <p>IT Blogger</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='box reveal'>
-                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
-                    <div classname="d-flex">
-                      <div style={{ width: '80px', height: '80px' }}>
-                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px', border: "thick double white" }} />
                       </div>
                       <div className='d-flex flex-column'>
                         <p>Emily Blunt</p>
@@ -297,7 +274,32 @@ const HomePage = () => {
 
                     <div classname="d-flex">
                       <div style={{ width: '80px', height: '80px' }}>
-                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px' }} />
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px', border: "thick double white" }} />
+                      </div>
+                      <div className='d-flex flex-column'>
+                        <p>Emily Blunt</p>
+                        <p>IT Blogger</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='box reveal'>
+                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
+                    <div classname="d-flex">
+                      <div style={{ width: '80px', height: '80px' }}>
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px', border: "thick double white" }} />
+                      </div>
+                      <div className='d-flex flex-column'>
+                        <p>Emily Blunt</p>
+                        <p>IT Blogger</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='box reveal'>
+                    <p> Quisque ac iaculis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci tellus, hendrerit id congue sed, rhoncus eget nunc. Proin eu nibh vitae velit malesuada aliquam at ut turpis. </p>
+
+                    <div classname="d-flex">
+                      <div style={{ width: '80px', height: '80px' }}>
+                        <img src='https://openaidavinci.textract.ai/img/reviews/S20Qrro3U2.jpg' style={{ width: '80px', height: '80px', border: "thick double white" }} />
                       </div>
                       <div className='d-flex flex-column'>
                         <p>Emily Blunt</p>
@@ -342,7 +344,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className='team-sec'>
+        <div className='team-sec' id='team-sec'>
           <div className='container'>
             <div className='team-content'>
               <p>Various Subscription Plans</p>
@@ -415,7 +417,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className='blog-sec'>
+        <div className='blog-sec' id='blog-sec'>
           <div className='container'>
             <p><span style={{ color: 'rgb(254, 178, 0)' }}>Latest</span> Blogs</p>
             <p>Read our unique blog articles about various data archiving solutions and secrets</p>
@@ -447,7 +449,7 @@ const HomePage = () => {
             </Slider>
           </div>
         </div>
-        <div className='articles'>
+        <div className='articles' id='articles'>
           <div className='container'>
             <div className='articles-sec'>
               <p>Frequently Asked Questions</p>
@@ -522,7 +524,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className='contact-sec'>
+        <div className='contact-sec' id='contact-sec'>
           <p><span style={{ color: 'rgb(254, 178, 0)' }}>Contact</span> With Us</p>
           <p>Reach out to us for additional information</p>
           <div className='container'>

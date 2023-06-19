@@ -212,6 +212,7 @@
       margin-top: 80px;
 
       .box {
+
         h2 {
           color: white;
         }
@@ -226,6 +227,9 @@
         div {
           margin-top: 20px;
           display: flex;
+          img{
+            order: thick double white;
+          }
           p:nth-of-type(1) {
             color: rgb(254, 178, 0);
             font-weight: 600;
@@ -663,6 +667,14 @@
 //responsive section//
 
 @media screen and (max-width: 1402px) {
+  .contact-sec .contact-content .contact-field div input{
+    width: 100% !important;
+  }
+  .contact-sec .contact-content .contact-field{
+    textarea{
+      width: 100% !important;
+    }
+  }
   .homepage .articles .articles-sec .article-table {
     width: 100%;
   }
@@ -682,6 +694,14 @@
   }
 }
 @media screen and (max-width: 750px) {
+  .contact-sec .contact-content .contact-field div input{
+    width: 100% !important;
+  }
+  .contact-sec .contact-content .contact-field{
+    textarea{
+      width: 100% !important;
+    }
+  }
   .slick-prev {
     left: 20px !important;
     display: none !important;
