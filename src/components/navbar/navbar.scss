@@ -83,6 +83,9 @@
   .link {
     color: white;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     a{
       color: white;
       text-decoration: none;
