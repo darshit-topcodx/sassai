@@ -492,10 +492,10 @@
 
     .blog-box {
       padding: 10px;
-      
+
       background-color: #272320;
       width: 400px !important;
-   
+
       border-radius: 15px;
       h5 {
         color: white;
@@ -672,10 +672,11 @@
 }
 @media screen and (max-width: 750px) {
   .contact-sec .contact-content .img-svg {
-    img{
-      width: 100% !important;}
+    img {
+      width: 100% !important;
+    }
   }
-  .contact-sec .contact-content .contact-field{
+  .contact-sec .contact-content .contact-field {
     margin-top: 30px;
     width: 100%;
   }
@@ -753,10 +754,10 @@
 }
 
 @media screen and (max-width: 520px) {
-  .homepage .blog-sec .blog-box{
+  .homepage .blog-sec .blog-box {
     width: 350px !important;
   }
-  .homepage .about-sec .about-content .cols-2 .card{
+  .homepage .about-sec .about-content .cols-2 .card {
     width: 100%;
   }
   .inbox-sec .inbox-content .email-box input {
@@ -789,8 +790,8 @@
 }
 
 @media screen and (max-width: 450px) {
-  .homepage .bonus-sec .bonus-content .box-div .box{
-    width: 100% ;
+  .homepage .bonus-sec .bonus-content .box-div .box {
+    width: 100%;
   }
   .homepage .features-sec .features-box .box {
     width: 100%;
