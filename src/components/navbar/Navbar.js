@@ -24,7 +24,6 @@ const Navbar = () => {
             <div className='Navbar'>
                 <div className='logo'>
                     <img src='https://cryptocurrency.qwery.ancorathemes.com/wp-content/uploads/2021/05/logo-inverse.png' />
-
                 </div>
                 <div className='nav-content'>
                     <div className='nav-links'>

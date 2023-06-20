@@ -162,17 +162,22 @@ const HomePage = () => {
     ]
   };
 
-  const [activePlans, setActivePlans] = useState('Monthly Plans')
+  const [activePlans, setActivePlans] = useState('Monthly Plans');
+  
+
+  
   return (
     <>
       <div className='homepage'>
         <div className='header-sec' id='header-sec'>
           <div className='container'>
             <div className='header-content'>
+              <h2>Meet, Davinci</h2>
               <h1>
-                Fresh cryptoworld news & trends
+                The Future of Writing
               </h1>
-              <p>Stay ahead of the cryptocurrency tendencies with our expert news and updates.</p>
+              
+              <p>Let AI create content for blogs, articles, websites, social media and more</p>
             </div>
           </div>
         </div>
@@ -185,6 +190,7 @@ const HomePage = () => {
                 <div className='card'>
                   <img />
                   <p>Latest AI technology</p>
+                  <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
                   <p>Lorem ipsum dolor sit amet est consectetur adipisicing elit. Ut aspernatur mollitia aliquid consectetur illo sapiente nemo obcaecati unde.</p>
                 </div>
                 <div className='card'>
