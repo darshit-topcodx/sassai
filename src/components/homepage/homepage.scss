@@ -616,7 +616,7 @@
     margin-top: 40px;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 100px;
+    gap: 80px;
     position: relative;
     .back-img {
       position: absolute;
@@ -625,13 +625,13 @@
     .img-svg {
       transition: 1s;
       opacity: 0;
-      transform: translateX(60px);
+      transform: translateX(10px);
       z-index: 1;
     }
     .img-svg.active {
       transition: 1s;
       opacity: 1;
-      transform: translateX(0px);
+      transform: translateX(10px);
     }
     .contact-field {
       z-index: 1;
@@ -693,7 +693,7 @@
     }
     .contact-field.active{
       opacity: 1;
-      transform: translateX(40px);
+      transform: translateX(-10px);
     }
   }
 }
