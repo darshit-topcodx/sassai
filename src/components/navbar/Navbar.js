@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 const Navbar = () => {
     const [toggle, settoggle] = useState(null);
-
+    const [closeToggle, setCloseToggle] = useState(true);
     const handleClose = () => {
         document.getElementById("close_toggle").classList.add("close-res-nav")
         settoggle(null)
@@ -23,19 +23,18 @@ const Navbar = () => {
         <>
             <div className='Navbar'>
                 <div className='logo'>
-             
-                    <h1 style={{color:"white"}}>DAVINCI</h1>
+                  <h1 style={{color:'white'}}>DEVINCI</h1>
                 </div>
                 <div className='nav-content'>
                     <div className='nav-links'>
-                        <a className='cool-link' href='#header-sec'>HOME</a>
+                        <a className='cool-link' href='#header-sec'>Home</a>
                         <a className='cool-link' href='#team-sec'>PRICES</a>
                         <a className='cool-link' href='#blog-sec'>BLOGS</a>
                         <a className='cool-link' href='#articles'>FAQS</a>
                         <a className='cool-link' href='#contact-sec'>CONTACTS</a>
                     </div>
                     <SearchIcon style={{ color: 'white', width: '50px', height: '30px' }} />
-                    <button>Sign up</button>
+                    <button>Let's Talk</button>
                 </div>
                 <div className='res-nav' style={{ color: 'white', width: '50px', height: '30px', color: 'white' }}>
                     <SearchIcon style={{ color: 'white', width: '50px', height: '30px' }} />

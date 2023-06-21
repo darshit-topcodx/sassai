@@ -98,6 +98,7 @@
           height: 250px;
           display: flex;
           flex-direction: column;
+          transform: scale(0);
           padding: 20px;
           align-items: self-start;
           justify-content: center;
@@ -116,7 +117,7 @@
           }
         }
         .card.active {
-          transition: 1s;
+          transition: 0.2s;
           transform: scale(1);
         }
       }
@@ -131,6 +132,7 @@
           display: flex;
           flex-direction: column;
           padding: 20px;
+          transform: scale(0);
           align-items: self-start;
           justify-content: center;
           background-color: #272320;
@@ -146,6 +148,10 @@
           p {
             text-align: start;
           }
+        }
+        .card.active {
+          transition: 0.2s;
+          transform: scale(1);
         }
       }
     }
@@ -691,13 +697,12 @@
         border: 0px;
       }
     }
-    .contact-field.active{
+    .contact-field.active {
       opacity: 1;
       transform: translateX(-10px);
     }
   }
 }
-
 
 //responsive section//
 
