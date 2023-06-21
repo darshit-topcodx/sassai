@@ -70,7 +70,8 @@ const HomePage = () => {
     }
   }
   window.addEventListener("scroll", reveal3);
-  function reveal() {
+  
+  function reveal4() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
@@ -84,7 +85,7 @@ const HomePage = () => {
       }
     }
   }
-  window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", reveal4);
 
 
   const settings = {
