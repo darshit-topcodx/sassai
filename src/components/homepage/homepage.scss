@@ -3,22 +3,6 @@
 @import "~slick-carousel/slick/slick-theme.css";
 @import url("https://fonts.googleapis.com/css?family=Khula:700");
 
-
-
-.console-container {
-  font-family:Khula;
-  font-size:4em;
-  text-align:center;
-width: 100%;
-  display:block; 
-  color:white;
-  
-}
-.console-underscore {
-   display:inline-block;
-  position:relative;
-}
-
 //animation sec=---------------------------------------
 @keyframes slidein {
   from {
@@ -70,13 +54,25 @@ width: 100%;
     h1 {
       animation-duration: 1s;
       animation-name: slidein;
-      font-size: 55px;
+      font-size: 100px;
       color: white;
+      background-image: linear-gradient(
+        45deg,
+        #ff61d3 10%,
+        #ff61d3 36%,
+        #b318ff 47%,
+        #00fff8 67%,
+        #00f0ff 76%,
+        #1e43ff
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 1000;
     }
     p {
-      
       font-size: 24px;
-      color: white
+      color: white;
     }
   }
 
@@ -118,6 +114,10 @@ width: 100%;
           p {
             text-align: start;
           }
+        }
+        .card.active {
+          transition: 1s;
+          transform: scale(1);
         }
       }
       .cols-2 {
@@ -167,7 +167,7 @@ width: 100%;
   }
 
   .bonus-sec {
-      background-color: black;
+    background-color: black;
     width: 100%;
     background-size: cover;
     padding-top: 150px;
@@ -230,7 +230,6 @@ width: 100%;
       margin-top: 80px;
 
       .box {
-
         h2 {
           color: white;
         }
@@ -245,7 +244,7 @@ width: 100%;
         div {
           margin-top: 20px;
           display: flex;
-          img{
+          img {
             order: thick double white;
           }
           p:nth-of-type(1) {
@@ -290,6 +289,7 @@ width: 100%;
     align-items: center;
     background-size: cover;
     background-color: black;
+
     background-repeat: no-repeat;
     .client-contet {
       .slick-arrow {
@@ -544,9 +544,8 @@ width: 100%;
       }
     }
   }
-  .blog-box.active{
+  .blog-box.active {
     transition: 1s;
-    //  transform: rotate(360deg);
     transform: scale(1);
   }
 
@@ -599,6 +598,7 @@ width: 100%;
 .accordion.active {
   animation: 0.8s slidein;
 }
+
 .contact-sec {
   padding-top: 50px;
   color: white;
@@ -616,17 +616,29 @@ width: 100%;
     margin-top: 40px;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 100px;
     position: relative;
     .back-img {
       position: absolute;
-      width: 100%;
+      width: 91%;
     }
     .img-svg {
+      transition: 1s;
+      opacity: 0;
+      transform: translateX(60px);
       z-index: 1;
+    }
+    .img-svg.active {
+      transition: 1s;
+      opacity: 1;
+      transform: translateX(0px);
     }
     .contact-field {
       z-index: 1;
       width: 50%;
+      transition: 1s;
+      opacity: 0;
+      transform: translateX(0px);
       div {
         display: flex;
         gap: 20px;
@@ -679,17 +691,22 @@ width: 100%;
         border: 0px;
       }
     }
+    .contact-field.active{
+      opacity: 1;
+      transform: translateX(40px);
+    }
   }
 }
+
 
 //responsive section//
 
 @media screen and (max-width: 1402px) {
-  .contact-sec .contact-content .contact-field div input{
+  .contact-sec .contact-content .contact-field div input {
     width: 100% !important;
   }
-  .contact-sec .contact-content .contact-field{
-    textarea{
+  .contact-sec .contact-content .contact-field {
+    textarea {
       width: 100% !important;
     }
   }
@@ -712,11 +729,11 @@ width: 100%;
   }
 }
 @media screen and (max-width: 750px) {
-  .contact-sec .contact-content .contact-field div input{
+  .contact-sec .contact-content .contact-field div input {
     width: 100% !important;
   }
-  .contact-sec .contact-content .contact-field{
-    textarea{
+  .contact-sec .contact-content .contact-field {
+    textarea {
       width: 100% !important;
     }
   }

@@ -6,8 +6,7 @@ import { Prepaid, MonthlyPLan, YearlyPLan } from '../../dummyData';
 import Backimg from '../../images/abcpqr.svg'
 const HomePage = () => {
   function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-
+    var reveals = document.querySelectorAll(".img-svg");
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
@@ -21,6 +20,7 @@ const HomePage = () => {
     }
   }
   window.addEventListener("scroll", reveal);
+
   function reveal1() {
     var reveals1 = document.querySelectorAll(".accordion");
 
@@ -36,7 +36,6 @@ const HomePage = () => {
       }
     }
   }
-
   window.addEventListener("scroll", reveal1);
 
   function reveal2() {
@@ -55,6 +54,25 @@ const HomePage = () => {
     }
   }
   window.addEventListener("scroll", reveal2);
+  function reveal3() {
+    var reveals2 = document.querySelectorAll(".contact-field");
+
+    for (var i = 0; i < reveals2.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals2[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals2[i].classList.add("active");
+      } else {
+        reveals2[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal3);
+
+
+
   const settings = {
     dots: true,
     infinite: false,
@@ -163,9 +181,9 @@ const HomePage = () => {
   };
 
   const [activePlans, setActivePlans] = useState('Monthly Plans');
-  
 
-  
+
+
   return (
     <>
       <div className='homepage'>
@@ -176,7 +194,7 @@ const HomePage = () => {
               <h1>
                 The Future of Writing
               </h1>
-              
+
               <p>Let AI create content for blogs, articles, websites, social media and more</p>
             </div>
           </div>
