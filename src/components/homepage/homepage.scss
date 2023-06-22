@@ -69,10 +69,15 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       font-family: 1000;
+      &:hover {
+      }
     }
     p {
       font-size: 24px;
       color: white;
+      &:hover {
+        color: rgb(254, 178, 0);
+      }
     }
   }
 

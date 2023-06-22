@@ -9,7 +9,7 @@
   width: 100%;
   position: fixed;
   z-index: 2;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +79,7 @@
   position: fixed;
   background-color: white;
   z-index: 3 !important;
- 
+
   flex-direction: column;
   background-color: black;
   transform: translateY(0);

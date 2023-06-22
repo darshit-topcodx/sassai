@@ -23,7 +23,7 @@ const Navbar = () => {
         <>
             <div className='Navbar'>
                 <div className='logo'>
-                  <h1 style={{color:'white'}}>DEVINCI</h1>
+                    <h1 style={{ color: 'white' }}>DEVINCI</h1>
                 </div>
                 <div className='nav-content'>
                     <div className='nav-links'>
@@ -34,7 +34,7 @@ const Navbar = () => {
                         <a className='cool-link' href='#contact-sec'>CONTACTS</a>
                     </div>
                     <SearchIcon style={{ color: 'white', width: '50px', height: '30px' }} />
-                    <button>Let's Talk</button>
+                    <button>SIGN UP</button>
                 </div>
                 <div className='res-nav' style={{ color: 'white', width: '50px', height: '30px', color: 'white' }}>
                     <SearchIcon style={{ color: 'white', width: '50px', height: '30px' }} />
@@ -53,8 +53,6 @@ const Navbar = () => {
                     <a className='cool-link' href='#articles'>FAQS</a>
                     <a className='cool-link' href='#contact-sec'>CONTACTS</a>
                 </div>
-
-
             </div>
         </>
     )
